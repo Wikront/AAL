@@ -19,8 +19,8 @@ public class Main {
 
         Controller controller = new Controller(1, "file.txt", new Rectangle(new Point(2,2), new Point(x,y)));
 
-        //FileLoader fileLoader = new FileLoader("C:\\Users\\Wiktor\\IdeaProjects\\AAL\\src\\testdata.txt");
-        FileLoader fileLoader = new FileLoader("C:\\Users\\Wiktor\\IdeaProjects\\AAL\\file.txt");
+        FileLoader fileLoader = new FileLoader("C:\\Users\\Wiktor\\IdeaProjects\\AAL\\src\\testdata.txt");
+        //FileLoader fileLoader = new FileLoader("C:\\Users\\Wiktor\\IdeaProjects\\AAL\\file.txt");
         LinkedList<RectanglesSet> problem = fileLoader.problemInstances;
 
         for(int i = 0; i < problem.size(); i++){
@@ -34,9 +34,9 @@ public class Main {
         int problemInstance = 0;
         Point maxCoordinates = new Point(x,y);
 
-        //AlgorithmController algorithmController = new AlgorithmController(problem.get(problemInstance));
+        AlgorithmController algorithmController = new AlgorithmController(problem.get(problemInstance));
 
-        Visualizator visualizator = new Visualizator(problem.get(problemInstance), maxCoordinates);
+        //Visualizator visualizator = new Visualizator(problem.get(problemInstance), maxCoordinates);
 
         System.out.println("---------------------------------");
 

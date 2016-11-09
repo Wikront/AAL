@@ -17,7 +17,7 @@ public class AlgorithmController {
     private int B; // y coordinate for bottom point from bottom - up interval
     private int U; // y coordinate for up point from bottom - up interval
     private int L; // x coordinate for left point from left - right interval
-    private int R; // x coordinate for right point from left - right intervalf'\
+    private int R; // x coordinate for right point from left - right interval
 
     public AlgorithmController(RectanglesSet rectanglesSet){
         this.rectanglesSet = rectanglesSet;
@@ -27,6 +27,8 @@ public class AlgorithmController {
         L = Integer.MAX_VALUE;
         R = 0;
         calculateIntervals();
+        createEdgesSet();
+        //SweepEdges sweepEdges = new SweepEdges(edgesSet, B, U, L, R);
         System.out.println("---------------------------------");
         System.out.println(B + " " + U + " " + L + " " + R);
     }
