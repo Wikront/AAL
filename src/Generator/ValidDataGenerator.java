@@ -12,7 +12,7 @@ public class ValidDataGenerator extends DataGenerator{
 
     /**
      * Create data which is valid for algorithm, divide given rectangle in smaller parts randomly
-     * @param basicRectangle
+     * @param basicRectangle rectangles in which all generated rectangles will be placed
      */
     public ValidDataGenerator(Rectangle basicRectangle){
         super(basicRectangle);

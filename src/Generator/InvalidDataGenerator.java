@@ -12,7 +12,8 @@ public class InvalidDataGenerator extends DataGenerator{
 
     /**
      * Create random number of rectangles on random positions in given rectangle
-     * @param basicRectangle
+     * TODO: Generated rectangles set may be valid for algorithm - this should be fixed
+     * @param basicRectangle rectangles in which all generated rectangles will be placed
      */
     public InvalidDataGenerator(Rectangle basicRectangle){
         super(basicRectangle);

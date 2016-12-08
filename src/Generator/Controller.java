@@ -16,8 +16,10 @@ public class Controller {
     LinkedList<LinkedList<Rectangle>> generatedInstances = new LinkedList<>();
 
     /**
-     * Controller is a class that generate test data using two classes InvalidDataGenerator,
-     * and ValidDataGenerator, and save it in text file in proper format
+     * Constructor of class controller which generate problem instances using 4 types of generators
+     * @param noOfInstances number of sets to generate
+     * @param filename name of file to save generated rectangles
+     * @param basicRectangle rectangle in which all rectangles will be generated
      */
     public Controller(int noOfInstances, String filename, Rectangle basicRectangle){
         this.noOfInstances = noOfInstances;
@@ -30,6 +32,9 @@ public class Controller {
         parseToTxtFile();
     }
 
+    /**
+     * Function generate .txt file with generated rectangles with specified format
+     */
     private void parseToTxtFile(){
         try {
             PrintWriter writer = new PrintWriter(filename);

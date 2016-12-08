@@ -12,7 +12,7 @@ public class OverlapDataGenerator extends ValidDataGenerator {
 
     /**
      * Use valid data and create hollow set by enlarging one of rectangles
-     * @param basicRectangle
+     * @param basicRectangle rectangles in which all generated rectangles will be placed
      */
     public OverlapDataGenerator(Rectangle basicRectangle) {
         super(basicRectangle);

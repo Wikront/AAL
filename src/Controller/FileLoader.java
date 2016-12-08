@@ -19,6 +19,11 @@ public class FileLoader {
     private String filename;
     public LinkedList<RectanglesSet> problemInstances = new LinkedList<>();
 
+    /**
+     * Constructor of class loading file and create rectangles set
+     * @param filename name of file to load
+     * @throws NullPointerException file may not exist
+     */
     public FileLoader(String filename) throws NullPointerException{
         this.filename = filename;
         String nextLine;

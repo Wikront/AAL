@@ -11,8 +11,9 @@ import java.util.Random;
 public class HollowDataGenerator extends ValidDataGenerator {
 
     /**
-     * Use valid data and create hole deleting one ore more of rectangles
-     * @param basicRectangle
+     * Use valid data and create hole deleting one of rectangles,
+     * but only if generated rectangle will be hollow
+     * @param basicRectangle rectangles in which all generated rectangles will be placed
      */
     public HollowDataGenerator(Rectangle basicRectangle) {
         super(basicRectangle);

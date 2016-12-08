@@ -12,6 +12,10 @@ public class SortEdges {
 
     private int size;
 
+    /**
+     * Constructor of class SortEdges which provide merge sort for edges set
+     * @param edges edges set created in controller
+     */
     public SortEdges(Edge[] edges){
         this.edges = edges;
         size = edges.length;

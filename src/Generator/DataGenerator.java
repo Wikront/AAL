@@ -12,6 +12,10 @@ public abstract class DataGenerator {
     protected Rectangle basicRectangle;
     protected LinkedList<Rectangle> rectangles;
 
+    /**
+     * Constructor of abstract class which describe Data Generator
+     * @param basicRectangle
+     */
     public DataGenerator(Rectangle basicRectangle){
         this.basicRectangle = basicRectangle;
         rectangles = new LinkedList<>();

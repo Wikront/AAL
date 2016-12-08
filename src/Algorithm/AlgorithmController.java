@@ -19,6 +19,11 @@ public class AlgorithmController {
     private int L; // x coordinate for left point from left - right interval
     private int R; // x coordinate for right point from left - right interval
 
+    /**
+     * Constructor of Algorithm Controller which coordinates working of algorithm and provide
+     * methods which prepare necessary data for algorithm
+     * @param rectanglesSet set of rectangles
+     */
     public AlgorithmController(RectanglesSet rectanglesSet){
         this.rectanglesSet = rectanglesSet;
         rectangles = rectanglesSet.getRectangles();
@@ -39,6 +44,9 @@ public class AlgorithmController {
         System.out.println(B + " " + U + " " + L + " " + R);
     }
 
+    /**
+     * Method calculate intervals needed for algorithm
+     */
     private void calculateIntervals(){
         for(int i = 0; i < rectanglesSet.size(); i++){
             Point lb = rectangles[i].getFirst();
@@ -58,6 +66,9 @@ public class AlgorithmController {
         }
     }
 
+    /**
+     * Method create set of Edges needed for algorithm
+     */
     private void createEdgesSet(){
         edgesSet = new Edge[rectanglesSet.size()*2];
 
