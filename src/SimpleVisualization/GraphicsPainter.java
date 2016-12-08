@@ -16,6 +16,13 @@ public class GraphicsPainter extends JPanel {
     private RectanglesSet rectanglesSet;
     private int multiplyIndex;
 
+    /**
+     * Constructor of class GraphicsPainter painting RectanglesSet on screen
+     * @param windowX window width
+     * @param windowY window height
+     * @param rectanglesSet RectanglesSet to paint
+     * @param multiplyIndex value which is used to scale rectangles
+     */
     public GraphicsPainter(int windowX, int windowY, RectanglesSet rectanglesSet, int multiplyIndex){
         this.windowX = windowX;
         this.windowY = windowY;
@@ -23,6 +30,10 @@ public class GraphicsPainter extends JPanel {
         this.multiplyIndex = multiplyIndex;
     }
 
+    /**
+     * Paints all Rectangles from RectanglesSet
+     * @param g Graphics
+     */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         this.setBackground(Color.WHITE);
@@ -35,6 +46,14 @@ public class GraphicsPainter extends JPanel {
 
     }
 
+    /**
+     * Paints single Rectangle form RectanglesSet
+     * @param g Graphics
+     * @param x1 x-axis coordinate of bottom left point
+     * @param y1 y-axis coordinate of bottom left point
+     * @param x2 x-axis coordinate of top right point
+     * @param y2 y-axis coordinate of top right point
+     */
     private void paintRect(Graphics g, int x1, int y1, int x2, int y2){
         int R = (int) (Math.random( )*256);
         int G = (int)(Math.random( )*256);

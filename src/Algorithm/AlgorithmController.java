@@ -28,7 +28,13 @@ public class AlgorithmController {
         R = 0;
         calculateIntervals();
         createEdgesSet();
-        //SweepEdges sweepEdges = new SweepEdges(edgesSet, B, U, L, R);
+        SortEdges sortEdges = new SortEdges(edgesSet);
+        edgesSet = sortEdges.getEdges();
+        SweepEdges sweepEdges = new SweepEdges(edgesSet, B, U, L, R);
+        if(sweepEdges.performSweep())
+            System.out.println("spojny");
+        else
+            System.out.println("nie spojny");
         System.out.println("---------------------------------");
         System.out.println(B + " " + U + " " + L + " " + R);
     }

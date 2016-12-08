@@ -8,6 +8,11 @@ public class Point {
     private int x;
     private int y;
 
+    /**
+     * Constructor of class point represents single point on a grid
+     * @param x x-axis coordinate of point
+     * @param y y-axis coordinate of point
+     */
     public Point(int x,  int y){
         this.x = x;
         this.y = y;

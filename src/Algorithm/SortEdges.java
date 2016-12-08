@@ -12,7 +12,7 @@ public class SortEdges {
 
     private int size;
 
-    private SortEdges(Edge[] edges){
+    public SortEdges(Edge[] edges){
         this.edges = edges;
         size = edges.length;
         this.helper = new Edge[size];
@@ -54,5 +54,9 @@ public class SortEdges {
             i++;
         }
 
+    }
+
+    public Edge[] getEdges(){
+        return edges;
     }
 }

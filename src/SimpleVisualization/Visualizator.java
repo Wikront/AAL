@@ -15,7 +15,9 @@ public class Visualizator extends JFrame{
     int height = 768;
 
     /**
-     * Visualizator provide visualisation of loaded rectangles
+     * Provide and manage visualization of RectanglesSet
+     * @param rectanglesSet RectanglesSet
+     * @param maxCoordinates Point with maximal coordinates in RectanglesSet
      */
     public Visualizator(RectanglesSet rectanglesSet, Geometrics.Point maxCoordinates) {
 
@@ -25,8 +27,6 @@ public class Visualizator extends JFrame{
         int multiplyIndex = (int)((width/x)*0.8);
         if(multiplyIndex > (int)((height/y)*0.8) )
             multiplyIndex = (int)((height/y)*0.8);
-
-        System.out.println("x: "+x+" y: "+y);
 
         graphicsPainter = new GraphicsPainter(width, height, rectanglesSet, multiplyIndex);
 

@@ -1,7 +1,5 @@
 package Geometrics;
 
-import java.util.ArrayList;
-
 /**
  * Created by Wiktor on 30.10.2016.
  */
@@ -9,6 +7,11 @@ public class RectanglesSet {
     private Rectangle[] rectangles;
     int size;
 
+    /**
+     * Constructor of class RectanglesSet represents all rectangles in problem instance
+     * collected in one set
+     * @param size Number of rectangles
+     */
     public RectanglesSet(int size){
         this.size = size;
         rectangles = new Rectangle[size];
