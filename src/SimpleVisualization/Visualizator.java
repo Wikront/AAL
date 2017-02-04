@@ -1,6 +1,7 @@
 package SimpleVisualization;
 
 import Geometrics.*;
+import Geometrics.Point;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,10 +18,10 @@ public class Visualizator extends JFrame{
     /**
      * Provide and manage visualization of RectanglesSet
      * @param rectanglesSet RectanglesSet
-     * @param maxCoordinates Point with maximal coordinates in RectanglesSet
      */
-    public Visualizator(RectanglesSet rectanglesSet, Geometrics.Point maxCoordinates) {
+    public Visualizator(RectanglesSet rectanglesSet) {
 
+        Point maxCoordinates = rectanglesSet.getMaxCoordinates();
         int x = maxCoordinates.getX();
         int y = maxCoordinates.getY();
 

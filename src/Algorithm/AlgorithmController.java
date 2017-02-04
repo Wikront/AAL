@@ -13,6 +13,7 @@ public class AlgorithmController {
     private RectanglesSet rectanglesSet;
     private Rectangle[] rectangles;
     private Edge[] edgesSet;
+    private boolean result;
 
     private int B; // y coordinate for bottom point from bottom - up interval
     private int U; // y coordinate for up point from bottom - up interval
@@ -36,12 +37,7 @@ public class AlgorithmController {
         SortEdges sortEdges = new SortEdges(edgesSet);
         edgesSet = sortEdges.getEdges();
         SweepEdges sweepEdges = new SweepEdges(edgesSet, B, U, L, R);
-        if(sweepEdges.performSweep())
-            System.out.println("spojny");
-        else
-            System.out.println("nie spojny");
-        System.out.println("---------------------------------");
-        System.out.println(B + " " + U + " " + L + " " + R);
+        result = sweepEdges.performSweep();
     }
 
     /**
@@ -80,5 +76,9 @@ public class AlgorithmController {
             edgesSet[i*2 + 1] = new Edge(rb, rectangles[i].getSecond(), 1);
         }
 
+    }
+
+    public boolean getResult() {
+        return result;
     }
 }

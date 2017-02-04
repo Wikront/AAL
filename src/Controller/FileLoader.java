@@ -6,6 +6,7 @@ import Geometrics.RectanglesSet;
 import com.sun.deploy.util.StringUtils;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -28,7 +29,11 @@ public class FileLoader {
         this.filename = filename;
         String nextLine;
         try {
-            bufferedReader = new BufferedReader(new FileReader(filename));
+            try {
+                bufferedReader = new BufferedReader(new FileReader(filename));
+            }catch (FileNotFoundException e){
+                System.out.println("Nie można odnaleźć pliku");
+            }
             int lineCounter = 1;
             while((nextLine = bufferedReader.readLine()) != null){
                 if(nextLine.charAt(0) != '[') {
@@ -54,7 +59,17 @@ public class FileLoader {
         }
     }
 
-    private void parseToRectangles(String textLine) throws Exception{
+    /**
+     * Basic Constructor used in parsing user input
+     */
+    public FileLoader(){}
+
+    /**
+     * Method which can parse line of text with points of rectangles into rectangles set
+     * @param textLine line with defined rectangles set
+     * @throws Exception wrong data format
+     */
+    public void parseToRectangles(String textLine) throws Exception{
         LinkedList<String> substrings = new LinkedList<>();
         int startSubstringIndex = 0;
 
